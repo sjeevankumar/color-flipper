@@ -12,6 +12,7 @@ const colors = [
 ];
 
 const btn = document.getElementById('btn')
+const bgColorText = document.getElementById('bgColorText')
 
 const getRandomNumber = (len) => {
     return Math.floor(Math.random() * len)
@@ -20,6 +21,7 @@ const changeBackgroundColor = () => {
     const randomNumber = getRandomNumber(colors.length)
     const bgColor = colors[randomNumber]
     document.body.style.backgroundColor = bgColor
+    bgColorText.innerText = bgColor
 }
 btn.addEventListener('click', () => {
     changeBackgroundColor()
